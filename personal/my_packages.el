@@ -10,6 +10,7 @@
   ;;spaceline
   ;;spaceline-all-the-icons
   dumb-jump
+  google-c-style
   ))
 
 ;;mwim

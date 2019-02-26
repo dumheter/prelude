@@ -37,3 +37,9 @@
 
 ;; namespace don't indent
 (c-set-offset 'innamespace 0)
+
+;; Google c style
+(add-hook 'c-mode-common-hook 'google-set-c-style)
+(add-hook 'c-mode-common-hook 'google-make-newline-indent)
+(add-hook 'c++-mode-hook 'google-set-c-style)
+(add-hook 'c++-mode-hook 'google-make-newline-indent)
