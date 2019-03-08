@@ -2,9 +2,9 @@
 # name: include guard
 # key: incg
 # --
-#ifndef $1_HPP_
-#define $1_HPP_
+#ifndef $1_H_
+#define $1_H_
 
 $0
 
-#endif//$1_HPP_
+#endif//$1_H_
