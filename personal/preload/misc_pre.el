@@ -18,3 +18,7 @@
 (setq backup-inhibited t)
 (setq auto-save-default nil)
 (setq make-backup-files nil)
+
+;; use my theme instead
+;;(disable-theme 'zenburn)
+(setq prelude-theme 'solarized-light)
