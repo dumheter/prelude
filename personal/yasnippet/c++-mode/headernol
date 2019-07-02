@@ -1,0 +1,20 @@
+# -*- mode: snippet -*-
+# name: header_no_license
+# key: headernol
+# --
+#ifndef $1_HPP_
+#define $1_HPP_
+
+namespace ${2:my_namespace}
+{
+  class ${3:my_classname}
+  {
+    public:
+      $0
+
+    private:
+
+  };
+}
+
+#endif//$1_HPP_
