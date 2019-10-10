@@ -45,3 +45,7 @@
 (add-hook 'c-mode-hook 'google-make-newline-indent)
 (add-hook 'c++-mode-hook 'google-set-c-style)
 (add-hook 'c++-mode-hook 'google-make-newline-indent)
+
+;; rust stuff
+(with-eval-after-load 'rust-mode
+  (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
