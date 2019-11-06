@@ -12,6 +12,8 @@
   company-lsp
   ccls
   solarized-theme
+  rust-mode
+  flycheck-rust
   ))
 
 ;;mwim
