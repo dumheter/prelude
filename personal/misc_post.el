@@ -12,7 +12,7 @@
 (setq prelude-guru nil)
 
 ;;remove ?preluding? red tab markings.
-;; (setq-default whitespace-toggle-options 't) NOT WORKING
+(setq prelude-whitespace nil)
 
 ;;flyspell
 ;;(setq ispell-extra-args '("--sug-mode=ultra" "--dict-dir=C:/msys64/usr/share/locale"))
@@ -55,3 +55,5 @@
           (lambda ()
             (make-local-variable 'js-indent-level)
             (setq js-indent-level 2)))
+
+(setq helm-rg-ripgrep-executable 'rg)

@@ -10,11 +10,18 @@
   lsp-mode
   lsp-ui
   company-lsp
-  ccls
+  ;;ccls
   solarized-theme
   rust-mode
   flycheck-rust
+  helm-rg
+  p4
+  rg
   ))
+
+
+;; company
+(setq company-idle-delay '0)
 
 ;;mwim
 (global-set-key (kbd "C-a") 'mwim-beginning-of-code-or-line)
@@ -52,12 +59,32 @@
 (use-package lsp-mode
            :hook (prog-mode . lsp))
 
-(use-package ccls
-             :after projectile
-             :custom
-             (ccls-args nil)
-             (ccls-executable (executable-find "ccls"))
-             (projectile-project-root-files-top-down-recurring
-              (append '("compile_commands.json" ".ccls")
-                      projectile-project-root-files-top-down-recurring))
-             :config (push ".ccls-cache" projectile-globally-ignored-directories))
+;;(use-package ccls
+;;             :after projectile
+;;             :custom
+;;             (ccls-args nil)
+;;             (ccls-executable (executable-find "ccls"))
+;;             (projectile-project-root-files-top-down-recurring
+;;              (append '("compile_commands.json" ".ccls")
+;;                      projectile-project-root-files-top-down-recurring))
+;;             :config (push ".ccls-cache" projectile-globally-ignored-directories))
+
+
+;; load p4 package
+(require 'p4)
+
+;; load rg package
+(require 'rg)
+(rg-enable-default-bindings)
+
+;;(require 'helm-rg)
+(use-package helm-rg
+  :ensure t
+  :defer t
+  :after helm
+  :init
+  (define-key global-map (kbd "C-c C-m") 'helm-rg)
+  ;;(setq helm-rg-default-directory 'git-root)
+  :bind(
+        :map helm-rg-map
+        ("C-w" . backward-kill-word)))
