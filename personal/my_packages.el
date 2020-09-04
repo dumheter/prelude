@@ -7,9 +7,9 @@
   ;;aggressive-indent
   dumb-jump
   google-c-style
-  lsp-mode
-  lsp-ui
-  company-lsp
+  ;;lsp-mode
+  ;;lsp-ui
+  ;;company-lsp
   ;;ccls
   solarized-theme
   rust-mode
@@ -17,11 +17,19 @@
   helm-rg
   p4
   rg
+  eglot
   ))
 
 
+;; eglot
+(require 'eglot)
+(add-hook 'c++-mode-hook 'eglot-ensure)
+(add-hook 'c-mode-hook 'eglot-ensure)
+(add-to-list 'eglot-server-programs '(c++-mode . ("clangd")))
+(add-to-list 'eglot-server-programs '(c-mode . ("clangd")))
+
 ;; company
-(setq company-idle-delay '0)
+(setq company-idle-delay '0.5)
 
 ;;mwim
 (global-set-key (kbd "C-a") 'mwim-beginning-of-code-or-line)
@@ -56,8 +64,8 @@
 (dumb-jump-mode)
 
 ;; https://www.reddit.com/r/emacs/comments/audffp/tip_how_to_use_a_stable_and_fast_environment_to/
-(use-package lsp-mode
-           :hook (prog-mode . lsp))
+;;(use-package lsp-mode
+;;           :hook (prog-mode . lsp))
 
 ;;(use-package ccls
 ;;             :after projectile
