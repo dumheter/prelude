@@ -1,0 +1,38 @@
+Windows Registry Editor Version 5.00
+;; Be sure to set the correct path to Emacs on your system
+[HKEY_CURRENT_USER\Software\Classes\*\shell]
+
+;; Open file in existing frame
+[HKEY_CURRENT_USER\Software\Classes\*\shell\emacsopen1sameframe]
+@="&open with Emacs (existing frame)"
+"icon"="c:\\Program Files\\Emacs\\bin\\emacsclientw.exe"
+[HKEY_CURRENT_USER\Software\Classes\*\shell\emacsopen1sameframe\command]
+@="c:\\Program Files\\Emacs\\bin\\emacsclientw.exe -n --alternate-editor=\"c:\\Program Files\\Emacs\\bin\\runemacs.exe\" -n \"%1\""
+
+;; Open file in new frame
+[HKEY_CURRENT_USER\Software\Classes\*\shell\emacsopen2newframe]
+@="&open with Emacs (new frame)"
+"icon"="c:\\Program Files\\Emacs\\bin\\emacsclientw.exe"
+[HKEY_CURRENT_USER\Software\Classes\*\shell\emacsopen2newframe\command]
+@="c:\\Program Files\\Emacs\\bin\\emacsclientw.exe -n --alternate-editor=\"c:\\Program Files\\Emacs\\bin\\runemacs.exe\" -c -n \"%1\""
+
+;; Dired for desktop background
+[HKEY_CURRENT_USER\Software\Classes\DesktopBackground\shell\emacsopensameframe]
+@="&open Emacs here"
+"icon"="c:\\Program Files\\Emacs\\bin\\emacsclientw.exe"
+[HKEY_CURRENT_USER\Software\Classes\DesktopBackground\shell\emacsopensameframe\command]
+@="c:\\Program Files\\Emacs\\bin\\emacsclientw.exe  -n --alternate-editor=\"c:\\Program Files\\Emacs\\bin\\runemacs.exe\" -n \"%v\""
+
+;; Dired for directory
+[HKEY_CURRENT_USER\Software\Classes\Directory\shell\emacsopensameframe]
+@="&open Emacs here"
+"icon"="c:\\Program Files\\Emacs\\bin\\emacsclientw.exe"
+[HKEY_CURRENT_USER\Software\Classes\Directory\shell\emacsopensameframe\command]
+@="c:\\Program Files\\Emacs\\bin\\emacsclientw.exe  -n --alternate-editor=\"c:\\Program Files\\Emacs\\bin\\runemacs.exe\" -n \"%V\""
+
+;; Dired for directory background
+[HKEY_CURRENT_USER\Software\Classes\Directory\Background\shell\emacsopensameframe]
+@="&open Emacs here"
+"icon"="c:\\Program Files\\Emacs\\bin\\emacsclientw.exe"
+[HKEY_CURRENT_USER\Software\Classes\Directory\Background\shell\emacsopensameframe\command]
+@="c:\\Program Files\\Emacs\\bin\\emacsclientw.exe  -n --alternate-editor=\"c:\\Program Files\\Emacs\\bin\\runemacs.exe\" -n \"%V\""
