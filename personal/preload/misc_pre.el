@@ -1,3 +1,5 @@
+(setq prelude-whitespace nil)
+
 (scroll-bar-mode -1)
 
 ;; does prelude do this automagically?

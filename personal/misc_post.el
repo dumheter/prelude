@@ -11,9 +11,6 @@
 ;;dissable keyboard arrow warnings
 (setq prelude-guru nil)
 
-;;remove ?preluding? red tab markings.
-(setq prelude-whitespace nil)
-
 ;;flyspell
 ;;(setq ispell-extra-args '("--sug-mode=ultra" "--dict-dir=C:/msys64/usr/share/locale"))
 ;;(setq ispell-list-command "--list")
@@ -57,3 +54,8 @@
             (setq js-indent-level 2)))
 
 (setq helm-rg-ripgrep-executable 'rg)
+
+;; to tweak performance
+;; https://emacs-lsp.github.io/lsp-mode/page/performance/
+(setq gc-cons-threshold 500000000)
+(setq read-process-output-max (* 1024 1024))

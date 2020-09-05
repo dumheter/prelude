@@ -20,22 +20,10 @@
   eglot
   ))
 
-
-;; eglot
-(require 'eglot)
-(add-hook 'c++-mode-hook 'eglot-ensure)
-(add-hook 'c-mode-hook 'eglot-ensure)
-(add-to-list 'eglot-server-programs '(c++-mode . ("clangd")))
-(add-to-list 'eglot-server-programs '(c-mode . ("clangd")))
-
 ;; company
-(setq company-idle-delay '0.5)
+;;(setq company-idle-delay '0.5)
+(global-set-key (kbd "C-c c") 'company-complete)
 
-;;mwim
-(global-set-key (kbd "C-a") 'mwim-beginning-of-code-or-line)
-(global-set-key (kbd "C-e") 'mwim-end-of-code-or-line)
-(global-set-key (kbd "<home>") 'mwim-beginning-of-line-or-code)
-(global-set-key (kbd "<end>") 'mwim-end-of-line-or-code)
 
 ;;multiple-cursors
 ;;(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
