@@ -4,17 +4,14 @@
 # --
 #ifndef $1_HPP_
 #define $1_HPP_
+#if defined(_WIN32)
+#pragma once
+#endif
 
-namespace ${2:my_namespace}
-{
-  class ${3:my_classname}
-  {
-    public:
-      $0
+namespace ${2:my_namespace} {
 
-    private:
+$0
 
-  };
 }
 
 #endif//$1_HPP_

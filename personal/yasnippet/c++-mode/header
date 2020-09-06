@@ -28,6 +28,9 @@
 
 #ifndef $1_HPP_
 #define $1_HPP_
+#if defined(_WIN32)
+#pragma once
+#endif
 
 namespace ${2:my_namespace} {
 
