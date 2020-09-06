@@ -5,7 +5,7 @@
 /**
  * MIT License
  *
- * Copyright (c) 2019 Christoffer Gustafsson
+ * Copyright (c) 2020 Christoffer Gustafsson
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -29,16 +29,10 @@
 #ifndef $1_HPP_
 #define $1_HPP_
 
-namespace ${2:my_namespace}
-{
-  class ${3:my_classname}
-  {
-    public:
-      $0
+namespace ${2:my_namespace} {
 
-    private:
+$0
 
-  };
 }
 
 #endif//$1_HPP_
