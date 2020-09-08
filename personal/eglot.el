@@ -1,6 +1,9 @@
 ;; eglot
 (use-package eglot :ensure t)
-(add-to-list 'eglot-server-programs '((c++-mode c-mode) "clangd"))
+(add-to-list 'eglot-server-programs '((c++-mode c-mode) . ("clangd"
+                                                           "--background-index"
+                                                           "-j=6"
+                                                           "--pch-storage=memory")))
 (add-hook 'c++-mode-hook 'eglot-ensure)
 (add-hook 'c-mode-hook 'eglot-ensure)
 
