@@ -48,9 +48,6 @@
 ;;
 (global-set-key (kbd "M-o") 'other-window)
 
-;; dumb jump mode
-(dumb-jump-mode)
-
 ;; https://www.reddit.com/r/emacs/comments/audffp/tip_how_to_use_a_stable_and_fast_environment_to/
 ;;(use-package lsp-mode
 ;;           :hook (prog-mode . lsp))
@@ -72,15 +69,3 @@
 ;; load rg package
 (require 'rg)
 (rg-enable-default-bindings)
-
-;;(require 'helm-rg)
-(use-package helm-rg
-  :ensure t
-  :defer t
-  :after helm
-  :init
-  (define-key global-map (kbd "C-c C-m") 'helm-rg)
-  ;;(setq helm-rg-default-directory 'git-root)
-  :bind(
-        :map helm-rg-map
-        ("C-w" . backward-kill-word)))

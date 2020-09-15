@@ -1,13 +1,6 @@
 ;; Arduiono's .ino code is c++
 (add-to-list 'auto-mode-alist '("\\.ino\\'" . c++-mode))
 
-;;tab is 2 spaces
-(setq-default indent-tabs-mode nil)
-;;(setq-default tab-width 2)
-;;(setq indent-line-function 'insert-tab)
-;;(custom-set-variables
-;; '(c-basic-offset 2))
-
 ;;dissable keyboard arrow warnings
 (setq prelude-guru nil)
 
@@ -32,17 +25,6 @@
 (add-hook 'c++-mode-hook
           (lambda () (setq flycheck-clang-language-standard "c++17")))
 
-;; namespace don't indent
-(c-set-offset 'innamespace 0)
-
-;; Google c style
-(add-hook 'c-mode-common-hook 'google-set-c-style)
-(add-hook 'c-mode-common-hook 'google-make-newline-indent)
-(add-hook 'c-mode-hook 'google-set-c-style)
-(add-hook 'c-mode-hook 'google-make-newline-indent)
-(add-hook 'c++-mode-hook 'google-set-c-style)
-(add-hook 'c++-mode-hook 'google-make-newline-indent)
-
 ;; rust stuff
 (with-eval-after-load 'rust-mode
   (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
@@ -53,9 +35,45 @@
             (make-local-variable 'js-indent-level)
             (setq js-indent-level 2)))
 
-(setq helm-rg-ripgrep-executable 'rg)
 
 ;; to tweak performance
 ;; https://emacs-lsp.github.io/lsp-mode/page/performance/
 (setq gc-cons-threshold 500000000)
 (setq read-process-output-max (* 1024 1024))
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Code style c/c++   ;;;
+
+;; namespace don't indent
+(c-set-offset 'innamespace 0)
+
+;; Google c style
+;;(add-hook 'c-mode-common-hook 'google-set-c-style)
+;;(add-hook 'c-mode-common-hook 'google-make-newline-indent)
+;;(add-hook 'c-mode-hook 'google-set-c-style)
+;;(add-hook 'c-mode-hook 'google-make-newline-indent)
+;;(add-hook 'c++-mode-hook 'google-set-c-style)
+;;(add-hook 'c++-mode-hook 'google-make-newline-indent)
+
+;; Dumheter c style
+;; You got an error, could not find dumheter-c-style? Its in .emacs.d/custom_packages/dumheter-c-mode.el
+;; Install it with pacakge-install-from-buffer
+(add-hook 'c-mode-common-hook 'dumheter-set-c-style)
+(add-hook 'c-mode-common-hook 'dumheter-make-newline-indent)
+(add-hook 'c-mode-hook 'dumheter-set-c-style)
+(add-hook 'c-mode-hook 'dumheter-make-newline-indent)
+(add-hook 'c++-mode-hook 'dumheter-set-c-style)
+(add-hook 'c++-mode-hook 'dumheter-make-newline-indent)
+
+;;tab is 2 spaces
+;;(setq-default indent-tabs-mode nil)
+;;(setq-default tab-width 2)
+;;(setq indent-line-function 'insert-tab)
+;;(custom-set-variables
+;; '(c-basic-offset 2))
+
+;; override google-c-style
+(setq-default c-basic-offset 4
+              tab-width 4
+              indent-tabs-mode t)
