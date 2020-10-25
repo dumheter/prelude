@@ -1,6 +1,9 @@
 ;; Arduiono's .ino code is c++
 (add-to-list 'auto-mode-alist '("\\.ino\\'" . c++-mode))
 
+;; ddf is c++
+(add-to-list 'auto-mode-alist '("\\.ddf\\'" . c++-mode))
+
 ;;dissable keyboard arrow warnings
 (setq prelude-guru nil)
 
@@ -73,7 +76,7 @@
 ;;(custom-set-variables
 ;; '(c-basic-offset 2))
 
-;; override google-c-style
+;;override google-c-style
 (setq-default c-basic-offset 4
-              tab-width 4
-              indent-tabs-mode t)
+             tab-width 4
+             indent-tabs-mode t)
