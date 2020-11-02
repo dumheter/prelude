@@ -7,11 +7,6 @@
 ;;dissable keyboard arrow warnings
 (setq prelude-guru nil)
 
-;;flyspell
-;;(setq ispell-extra-args '("--sug-mode=ultra" "--dict-dir=C:/msys64/usr/share/locale"))
-;;(setq ispell-list-command "--list")
-;;(setq ispell-dictionary "british")
-
 ;; Set coding to use utf-8, except on windows where it uses utf-16
 ;;(setq utf-translate-cjk-mode nil) ; disable CJK coding/encoding (Chinese/Japanese/Korean characters)
 ;;(set-language-environment 'utf-8)
@@ -47,6 +42,8 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Code style c/c++   ;;;
+
+(prelude-require-package 'google-c-style)
 
 ;; namespace don't indent
 (c-set-offset 'innamespace 0)

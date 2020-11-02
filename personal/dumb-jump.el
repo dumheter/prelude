@@ -1,3 +1,5 @@
+(prelude-require-package 'dumb-jump)
+
 ;; dumb jump mode
 (dumb-jump-mode)
 

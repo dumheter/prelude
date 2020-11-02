@@ -18,3 +18,12 @@
 (global-set-key (kbd "đ") '"]")
 ;;(global-set-key (kbd "ŋ") '"(")
 ;;(global-set-key (kbd "ħ") '")")
+
+
+;;
+(global-set-key (kbd "M-o") 'other-window)
+
+
+;; company
+;;(setq company-idle-delay '0.5)
+(global-set-key (kbd "C-c c") 'company-complete)
