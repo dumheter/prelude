@@ -1,3 +1,6 @@
+;; .h is c++
+(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
+
 ;; Arduiono's .ino code is c++
 (add-to-list 'auto-mode-alist '("\\.ino\\'" . c++-mode))
 
@@ -43,10 +46,10 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Code style c/c++   ;;;
 
-(prelude-require-package 'google-c-style)
+;;(prelude-require-package 'google-c-style)
 
 ;; namespace don't indent
-(c-set-offset 'innamespace 0)
+;;(c-set-offset 'innamespace 0)
 
 ;; Google c style
 ;;(add-hook 'c-mode-common-hook 'google-set-c-style)
@@ -61,10 +64,10 @@
 ;; Install it with pacakge-install-from-buffer
 (add-hook 'c-mode-common-hook 'dumheter-set-c-style)
 (add-hook 'c-mode-common-hook 'dumheter-make-newline-indent)
-(add-hook 'c-mode-hook 'dumheter-set-c-style)
-(add-hook 'c-mode-hook 'dumheter-make-newline-indent)
-(add-hook 'c++-mode-hook 'dumheter-set-c-style)
-(add-hook 'c++-mode-hook 'dumheter-make-newline-indent)
+;;(add-hook 'c-mode-hook 'dumheter-set-c-style)
+;;(add-hook 'c-mode-hook 'dumheter-make-newline-indent)
+;;(add-hook 'c++-mode-hook 'dumheter-set-c-style)
+;;(add-hook 'c++-mode-hook 'dumheter-make-newline-indent)
 
 ;;tab is 2 spaces
 ;;(setq-default indent-tabs-mode nil)
@@ -74,6 +77,6 @@
 ;; '(c-basic-offset 2))
 
 ;;override google-c-style
-(setq-default c-basic-offset 4
-             tab-width 4
-             indent-tabs-mode t)
+;;(setq-default c-basic-offset 4
+;;             tab-width 4
+;;             indent-tabs-mode t)

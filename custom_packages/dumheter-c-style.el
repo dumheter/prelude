@@ -65,10 +65,10 @@ Suitable for inclusion in `c-offsets-alist'."
   `((c-recognize-knr-p . nil)
     (c-enable-xemacs-performance-kludge-p . t) ; speed up indentation in XEmacs
     (c-basic-offset . 4)
-    (tab-width 4)
+    (tab-width . 4)
     (indent-tabs-mode . t)
     (c-comment-only-line-offset . 0)
-    (c-hanging-braces-alist . ((defun-open after)
+	(c-hanging-braces-alist . ((defun-open after)
                                (defun-close before after)
                                (class-open after)
                                (class-close before after)
@@ -92,9 +92,9 @@ Suitable for inclusion in `c-offsets-alist'."
      . (c-semi&comma-no-newlines-for-oneline-inliners
         c-semi&comma-inside-parenlist
         c-semi&comma-no-newlines-before-nonblanks))
-    (c-indent-comments-syntactically-p . t)
+    (c-indent-comments-syntactically-p . nil)
     (comment-column . 40)
-    (c-indent-comment-alist . ((other . (space . 4))))
+    ;;(c-indent-comment-alist . ((other . (space . 4))))
     (c-cleanup-list . (brace-else-brace
                        brace-elseif-brace
                        brace-catch-brace
