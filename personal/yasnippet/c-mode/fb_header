@@ -2,7 +2,7 @@
 # name: frostbite header
 # key: fbheader
 # --
-// (c) 2020 Electronic Arts Inc.
+// (c) Electronic Arts Inc.
 #pragma once
 
 namespace fb
