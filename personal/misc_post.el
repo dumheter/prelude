@@ -96,3 +96,8 @@
         (insert filename)
         (clipboard-kill-region (point-min) (point-max)))
       (message filename))))
+
+;;; Projectile uses linux 'tr' command
+(setq projectile-git-submodule-command nil)
+(setq projectile-fossil-command nil)
+(setq projectile-svn-command nil)

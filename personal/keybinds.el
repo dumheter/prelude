@@ -21,7 +21,7 @@
 
 
 ;;
-(global-set-key (kbd "M-o") 'other-window)
+;;(global-set-key (kbd "M-o") 'other-window)
 
 
 ;; company

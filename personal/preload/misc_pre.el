@@ -1,12 +1,14 @@
-(scroll-bar-mode -1)
-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; prelude settings
 ;;dissable keyboard arrow warnings
 (setq prelude-guru nil)
 
 (setq prelude-minimalistic-ui t)
-(setq prelude-clean-whitespace-on-save f)
-(setq prelude-format-on-save f)
+(setq prelude-clean-whitespace-on-save nil)
+(setq prelude-format-on-save nil)
 (setq prelude-theme 'solarized-light)
+
+(scroll-bar-mode -1)
 
 ;; does prelude do this automagically?
 ;; out-of-emacs clipboard gets into the kill ring
