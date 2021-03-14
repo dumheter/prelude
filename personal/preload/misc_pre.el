@@ -1,6 +1,12 @@
-;;(setq prelude-whitespace nil)
-
 (scroll-bar-mode -1)
+
+;;dissable keyboard arrow warnings
+(setq prelude-guru nil)
+
+(setq prelude-minimalistic-ui t)
+(setq prelude-clean-whitespace-on-save f)
+(setq prelude-format-on-save f)
+(setq prelude-theme 'solarized-light)
 
 ;; does prelude do this automagically?
 ;; out-of-emacs clipboard gets into the kill ring
@@ -13,14 +19,7 @@
 (set-selection-coding-system 'utf-8) ; please
 (prefer-coding-system 'utf-8) ; with sugar on top
 
-;; Show keystrokes in progress
-;; (setq echo-keystrokes 0.1) NOT NEEDED ANYMORE
-
 ;; no more ~ files
 (setq backup-inhibited t)
 (setq auto-save-default nil)
 (setq make-backup-files nil)
-
-;; use my theme instead
-;;(disable-theme 'zenburn)
-(setq prelude-theme 'solarized-light)

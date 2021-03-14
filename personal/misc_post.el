@@ -7,9 +7,6 @@
 ;; ddf is c++
 (add-to-list 'auto-mode-alist '("\\.ddf\\'" . c++-mode))
 
-;;dissable keyboard arrow warnings
-(setq prelude-guru nil)
-
 ;; Set coding to use utf-8, except on windows where it uses utf-16
 ;;(setq utf-translate-cjk-mode nil) ; disable CJK coding/encoding (Chinese/Japanese/Korean characters)
 ;;(set-language-environment 'utf-8)
