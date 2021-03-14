@@ -1,4 +1,4 @@
-(setq prelude-whitespace nil)
+;;(setq prelude-whitespace nil)
 
 (scroll-bar-mode -1)
 

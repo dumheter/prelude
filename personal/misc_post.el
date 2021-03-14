@@ -39,7 +39,8 @@
 
 ;; to tweak performance
 ;; https://emacs-lsp.github.io/lsp-mode/page/performance/
-(setq gc-cons-threshold 500000000)
+;;(setq gc-cons-threshold 100000000)
+(setq gc-cons-threshold 10000000)
 (setq read-process-output-max (* 1024 1024))
 
 
@@ -80,3 +81,21 @@
 ;;(setq-default c-basic-offset 4
 ;;             tab-width 4
 ;;             indent-tabs-mode t)
+
+
+;; Whitespace
+;;(setq whitespace-line-column 200) ;; limit line length (80 normal)
+(setq whitespace-style '(face empty trailing))
+(setq prelude-clean-whitespace-on-save nil)
+
+(defun dumheter-put-file-name-on-clipboard ()
+  "Put the current file name on the clipboard"
+  (interactive)
+  (let ((filename (if (equal major-mode 'dired-mode)
+                      default-directory
+                    (buffer-file-name))))
+    (when filename
+      (with-temp-buffer
+        (insert filename)
+        (clipboard-kill-region (point-min) (point-max)))
+      (message filename))))
