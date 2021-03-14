@@ -1,4 +1,4 @@
-(prelude-require-packages '(solarized-theme p4 rg orderless marginalia))
+(prelude-require-packages '(solarized-theme p4 rg orderless))
 
 ;; load p4 package
 (require 'p4)

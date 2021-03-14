@@ -101,3 +101,8 @@
 (setq projectile-git-submodule-command nil)
 (setq projectile-fossil-command nil)
 (setq projectile-svn-command nil)
+
+;; no more ~ files
+(setq backup-inhibited t)
+(setq auto-save-default nil)
+(setq make-backup-files nil)
