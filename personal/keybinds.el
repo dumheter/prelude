@@ -27,3 +27,7 @@
 ;; company
 ;;(setq company-idle-delay '0.5)
 (global-set-key (kbd "C-c c") 'company-complete)
+
+
+;; Swiper
+(global-set-key (kbd "C-s") 'swiper-isearch)
