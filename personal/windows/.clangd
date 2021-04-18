@@ -1,0 +1,10 @@
+CompileFlags:
+	Add: [-W0, -DEA_NO_VEC_OPERATOR_OVERLOADS, -Dabstract="", -D_HAS_EXCEPTIONS=0]
+	Remove: [-W*, -d2SSAOptimizer-]
+Index:
+	Background: Skip
+---
+If:
+	PathMatch: [.*/Code/ExtensionOne/.*, .*/Code/ExtensionTwo/.*]
+Index:
+	Background: Build
